@@ -3449,3 +3449,17 @@ input[type="button"]:disabled,
     padding: 0;
   }
 }
+
+ /*Ajout fancy : element ressort quand on passe la souris dessus - chatgpt */
+ 
+.element {
+  transition: all 0.3s ease; /* transition douce */
+}
+
+.element:hover {
+  transform: scale(1.05); /* agrandit légèrement */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* ajoute une ombre */
+}
+
+
+
