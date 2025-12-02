@@ -1,0 +1,127 @@
+---
+title: "POL6078 - Projet de session : L'aide internationale et la France"
+author: "Charlotte Amédée"
+date: "Décembre 2024"
+output:
+  html_document:
+    theme: lumen
+    toc: true
+    toc_float: true
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+# Configuration globale des chunks
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+library(knitr) 
+library(rmarkdown) 
+library(markdown)
+```
+
+# INTRODUCTION : Ma question de recherche
+  Depuis l'arrêt du programme d'aide internationale USAID, quelques mois après l'arrivée au pouvoir de Donald Trump, les financements internationaux liés au développement et à l'humanitaire sont en chute libre à l'échelle globale, et ce pour l'ensemble des pays bailleurs. Au delà du contexte géopolitique, l'orientation politique d'un gouvernement est elle un facteur pertinent à prendre en compte lorsqu'on cherche des explications au montant de ces aides ? 
+
+  Pour ce projet, je souhaitais alors m'intéresser au lien entre les orientations politiques des gouvernements et le montant d'aide humanitaire alloué à l'international, afin de voir si cette orientation être une variable d'influence. 
+Mes intérêts de recherche portant davantage sur l'étude de politiques publiques sur le secteur humanitaire, je me suis ici décidée  pour un sujet qui me permettait d'utiliser un maximum d'otils vus dans le cadre du cours. Pour guider ma lecture de la littérature sur ce sujet, je suis  partie de la supposition que les gouvernements davantage orientés à gauche avaient plus tendance à allouer l'aide humanitaire et étaient plus altruistes que des gouvernements plutôt orientés à droite.
+
+# REVUE DE LA LITTÉRATURE : 
+  J'ai d'abord utilisé **Gemini** pour m'aider à formuler un 'prompt' pour **Elicit** à partir des informations indiquées précédemment, afin de poser la meilleure question possible. J'ai décidé de garder la question formulée par **Gemini** comme telle, puisqu'elle permettait de pousser directement plus loin dans mon sujet : To what extent do left-wing governments allocate humanitarian aid based on recipient need versus strategic political interests compared to right-wing governments?  **Elicit** a réalisé un rapport à partir de 20 références, que j'ai ensuite exporté  dans **Zotero**, pour créer la bibliographie finale. 
+
+  À ma question initiale, la littérature répond ainsi : 
+
+### Divergences idéologiques dans l'allocation de l'aide
+  Les gouvernements de gauche affichent systématiquement un engagement plus marqué en faveur de l'aide humanitaire, du moins dans les discours. Dietrich et al. (2020) ont constaté que les partis de gauche expriment des sentiments plus favorables envers l'aide dans leurs programmes électoraux, ce qui se traduit par des promesses de dons plus élevées à l'international De même, Greene et al. (2018) notent que les gouvernements de gauche "internationalistes" augmentent spécifiquement l'aide d'urgence en cas de catastrophe, et  privilégient l'aide aux bénéficiaires les plus démunis (Greene et al., 2023).
+  À l'inverse, les gouvernements de droite privilégieraient une approche plus stratégique. Fleck et al. (2003) montrent qu'aux États-Unis, si les préoccupations humanitaires sont plus importantes dans les prises de décision des dirigeants démocrates, ce sont davantage les intérêts commerciaux et stratégiques qui priment pour les administrations républicaines. Greene et al. (2018, 2023) observent également que les gouvernements conservateurs favorisent une aide susceptible de stimuler le commerce, en sélectionnant les bénéficiaires selon les opportunités économiques qu'ils représentent et la possiblité de rendement. 
+  Les différences idéologiques varient aussi selon le secteur d'aide et l'époque. Greene et al. (2018) soulignent que les gouvernements aux tendances isolationnistes réduisent les aides budgétaires et l'aide liée au commerce, là où la gauche se concentre sur les secours d'urgence.
+
+### Variations contextuelles et nuances
+  Enfin, d'autres auteurs mettent en avant certaines nuances. La taille et la puissance du pays donateur seraient une variable importante lorsuq'on cherche à expliquer les motivations des montants de l'aide internationale. Bermeo et al. (2011) révèlent que chez les grandes puissances, où les objectifs stratégiques sont prépondérants, la gauche et la droite allouent des montants globaux similaires, mais diffèrent dans la répartition géographique des bénéficiaires. Chez les petits donateurs, les gouvernements de droite tendent toutefois à couper dans ces budgets et à attribuer significativement moins d'aide.
+  Les études par pays révèlent d'autres complexités. Dreher et al. (2015) ont trouvé qu'en Allemagne, le leadership socialiste a paradoxalement accru l'importance des motifs géostratégiques et commerciaux tout en réduisant les engagements globaux. Au Canada, Brown et al. (2018, 2020) démontrent que malgré des différences rhétoriques, les gouvernements successifs font preuve d'une grande continuité dans leurs programmes d'aide. Les changements relèvent souvent davantage du "branding" électoral interne que d'une réponse aux besoins des bénéficiaires.
+
+### Des considérations stratégiques indépendantes de l'orientation politique
+  Toutefois, pour uen autre partie de la littérature, cette distinction droite/gauche sur l'alloation de l'aide ne tient pas vraiment. Lindelöw et al. (2018) ont observé qu'en Suède, il existe une tendance commune mêlant altruisme et stratégie dans l'allocation de l'aide, quelle que soit la couleur politique. Narang et al. (2016) montrent que dans le cas des guerres civiles,  indépendamment de l'idéologie du donateur, l'aide versée semble dans un premier temps motivée par l'humanitaire, alors que l'aide post-conflit tend, elle, à cibler des pays stratégiquement importants.
+Ali et al. (2015) notent que si certains donateurs (Canada, Pays-Bas, pays nordiques) sont plus philanthropes que d'autres puissances (États-Unis, Royaume-Uni, France, Allemagne), l'aide bilatérale continue généralement de servir des intérêts géostratégiques, quelle que soit l'orientation politique. Enfin, Isopi et al. (2009) concluent que la vaste littérature empirique démontre que les donateurs poursuivent avant tout des intérêts politiques et économiques. Les préoccupations purement développementales ou humanitaires pèsent relativement peu dans la balance, indépendamment de l’idéologie.
+
+### Conclusion
+  En somme, bien que les différences idéologiques dans l'allocation de l'aide puissent apparaître, les contraintes structurelles plus larges liées aux relations internationales et aux pressions politiques diminuent l'importance de cette variable dans l'allocation de l'aide. Ces divergences sont souvent plus marquées dans les discours et dans certains secteurs spécifiques que dans les volumes globaux d'aide ou les orientations stratégiques fondamentales.
+
+  Il aurait été possible de pousser davantage la revue de la littérature à partir d'outils comme **Google Scholar**, afin d'explorer les articles cités par les références en ma possession, pour faire une analyse plus compréhensive des différents déterminants de l'allocation d'aide humanitaire dans la littérature. 
+
+# HYPOTHÈSES 
+  Je décide alors, pour construire mon étude et mon hypothèse, de me concentrer sur la France, pour rendre la collecte de données plus faisable. Notons toutefois que la littérature ne s'intéressait pas spécifiquement au cas de la France, ce pourquoi la revue d'articles ne s'est pas concentré sur ce pays. On peut alors dériver deux hypothèses de cette littérature : 
+**H1** - La couleur politique des gouvernements en France n'a pas eu d'influence sur les montants globaux de l'aide 
+**H2** - Ces différences idéologiques se retrouvent toutefois dans le type d'aide (stratégique ou humanitaire) apportée aux autres pays  
+
+# COLLECTE DE DONNÉES 
+  Pour répondre à ces hypothèses, j'ai cherché des bases de données me permettant d'avoir un aperçu des montants d'aide internationale alloués par la France dans le temps. La base de données CRS (Creditor Reporting System) de l'OCDE (Organisation de coopération et de développement économique) nous permet d'avoir un accès libre à ces données. J'ai alors appliqué des filtres afin de sélectionner les données sur les aides françaises, de 2002 à 2022, alloués au pays en développement (Developing Countries) et aux pays les moins développés ou PMA (Least Developed Countries). Cette sélection ne permet pas de prendre en compte tous les pays, mais la sélection de variables supplémentaires aurait conduit à des doublons de pays dans la bases de données. J'ai effectué cette première extraction de données pour tester l'hypothèse 1. 
+
+  Pour tester l'hypothèse 2, j'ai appliqué des filtres supplémentaires, en particulier celui du secteur (Sector), en sélectionnant les variables de l'aide humanitaire (Humanitarian Aid) pour tester le montant d'aide humanitaire, et les variables d'infrastructures économiques et de services (Economic Infrastructure and services) et de secteurs de production (Production sectors) pour tester le montant d'aide économique/stratégique. Je souhaite tout de même mettre en évidence que cette sélection est imparfaite, puisque ces variables ont été choisies arbitrairement pour ne pas avoir trop de données (la base de données étant très lourde) et ne reflètent peut être pas l'ensemble des éléments à prendre en compte pour comptabiliser au mieux l'aide humanitaire et 'économique'. 
+
+  J'ai téléchargé les deux bases de données (qui auraient, en rétrospective, aussi pu être téléchargé ensemble) au format csv. Les données étant séparées avec des virgules et très difficiles à lire, j'ai sollicité l'aide de **Gemini**, pour me donner une fonction me permettant de lire ces données : read_delim. 
+J'ai alors pu commencer à traiter mes données, à les nettoyer et à les visualiser. 
+
+# ANALYSE DE DONNÉES ET VISUALISATION
+### Le code des données
+  J'ai donc importé et nettoyé les deux bases de données dans **R**, et effectué des visualisations graphiques pour traiter les données. Grâce aux packages ggplot et ggplot2 j'ai testé mes première et deuxième hypothèses respectivement. J'ai utilisé l'aide de **Gemini**  pour des requêtes spécifiques, pour ajuster mon code sur des questions esthétiques, pour ajuster spécifiquement certaines échelles, ou pour résoudre des bugues.   
+  Le graphique pour tester ma première hypthèse est resté très sommaire, puisqu'il m'a permis de visualiser clairement les variations du montant de l'aide par année, selon l'orientation politique du gouvernement. Il n'était toutefois pas très intéressant puisque les orientations politiques des gouvernements sont restées assez stables avec le temps. 
+
+```{r, echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("/Users/charlotteamedee/amedee-account.github.io/projet_session/images/graph_1.png")
+```
+
+  L'ajout des variables par secteur a permis de rendre l'étude et l'analyse de données un peu plus intéressante. En augmentant la transparence des montants globaux, j'ai fais le choix de superposer la visualisation des variables par secteur au premier graphique, tout en ajustant l'échelle pour que la visualisation soit plus intéressante.
+
+```{r, echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("/Users/charlotteamedee/amedee-account.github.io/projet_session/images/graph_2.png")
+```
+
+### Observations 
+  On observe donc que, de 2002 à 2022, le montant total a évolué plutôt indépendamment de l'orientation politique du gouvernement. Le fait que j'ai codé le gouvernement de 2017 à 2022 comme "centre" pourrait être critiquable dans le sens où cette dénomination peut être remise en cause, puisque certaines analyses tendraient à le considérer à droite. En tout cas, cela ne nous permet pas vraiment de tirer des conclusions selon l'orientation politique du gouvernement. La hausse considérable des montants d'aide internationale après 2019 doit être notée et sera à prendre en compte dans l'analyse. 
+
+  Si on s'attarde sur le graphique final de l'aide internationale de la France, avec la division par secteur, il est clair que par rapport à l'aide humanitaire qui stagne à des niveaux plutôt bas, avec une légère hausse en 2022 (dûe probablement au début de la Guerre en Ukraine ?), c'est bien le soutien financier aux infrastructures économiques et aux services qui domine, donnant davantage une connotation stratégique et intéressée à l'aide internationale française. 
+
+### Analyse et conclusion
+  Avec ces données, quelles conclusions tirer pour nos hypothèses ? D'abord, notons que cette analyse est très imparfaite, puisqu'on aurait pu prendre en compte davantage de variables pour expliquer l'aide internationale apportée par la France. 
+On pourra alors dire que **H1** est confirmée : on n'observe pas de lien clair entre le montant total d'aide allouée et l'orientation politique des gouvernements. Le fait qu'on ait une variable "Centre" remet en cause une vision binaire de l'orientation politique des gouvernements, mais mériterait d'être exploré en tant que tel. On pourrait supposer que c'est davantage la conjoncture internationale (crise financière de 2008, attentats de 2015, crise du Covid, Guerre en Ukraine) qui permettraient d'expliquer l'évolution de ces montants. 
+  L'hypothèse **H2** ne semble pas confirmée : on n'observe, à nouveau, pas de lien clair entre une orientation politique et un changement signficatif dans l'allocation de l'aide par secteur. On observe une hausse très forte de l'aide sous forme de soutien aux infrastructures économiques et aux services, mais cela semble plutôt indépendant de l'orientation politique du gouvernement. 
+
+  On pourrait ainsi conclure, à la vue de ses résultats, que l'orientation politique des gouvernements n'est peut être pas la variable la plus pertinente pour expliquer les montants d'aide humanitaire, en tout cas dans le cas français, ce qui serait plutôt en accord avec ce que dis la littérature sur le sujet. Toutefois, il aurait été pertinent de tester plus en détail les variables d'une aide "stratégoique 
+
+## DISCUSSION 
+  J'ai utilisé les différents outils pour des raisons pratiques et pour mettre en oeuvre tout ce qu'il a été possible dans la session. 
+
+  J'ai d'abord utilisé **Gemini** à différentes de ce travail, à la fois pour formuler mes hypothèses, pour me conseiller des bases de données correpondant à mes questions, et pour m'aider à rédiger le code R. L'abonnement gratuit d'un an et la qualité des réponses ont guidé mon choix pour cet outil en particulier. C'est un outil très accessible, largement utilisé, mais qui est toutefois possédé par Google, donc un logiciel propriétaire, qui n'est ni transparent ni open-source. Cette IA reste toutefois populaire puisqu'elle est pour le moment l'une des plus performantes.
+
+  **Elicit** m'a permis d'effectuer la revue de littérature :  cet outil est de plus en plus utilisé par la communauté universitaire et qui gagne en popularité. C'est un outil payant, propriétaire, qui n'est pas transparent, mais qui répondait à mes besoins de revue rapide pour ce projet. L'usage de la version Pro m'a permis de faire une meilleure utilisation de cet outil. Sa compatibilité avec **Zotero**, qui permet d'exporter des références directement dans cet outil, que j'utilise beaucoup, a aussi guidé ce choix. C
+
+  Enfin, **R** et ses packages (ggplot et ggplot2), ainsi que **Zotero**, sont des logiciels libres et ont un code source ouvert, sont accessibles, largement utilisés et très populaires. Ce sont des outils que j'ai appris à utiliser, qui vont m'être grandement utiles pour la suite de mes recherches par leur compatibilité avec d'autres outils et leur flexibilité, ce pourquoi j'ai pris la décision de les utiliser. R me permet de rendre mes résultats de visualisation de ma recherche transparents et réplicables, grâce à leur hébergement sur **Github**. C'est un outil que j'espère finalement continuer à utiliser, par l'étendue des analyses qu'il permet de faire ainsi que des valeurs qu'il porte. 
+
+## BIBLIOGRAPHIE
+*Ali, M., Banks, G., & Parsons, N. (2015). Why Donors Give Aid and to Whom ? A Critique of the Historical and Contemporary Aid Allocation Regime.
+
+*Büthe, T., Major, S., & Souza, A. e de M. e. (2012). The Politics of Private Foreign Aid : Humanitarian Principles, Economic Development Objectives, and Organizational Interests in NGO Private Aid Allocation. International Organization, 66(4), 571‑607. https://doi.org/10.1017/s0020818312000252
+
+*Bermeo, S., & Leblang, D. (2011). Clowns to the Left of Me, Jokers to the Right : How Donor Partisanship Shapes the Allocation of Foreign Aid 1.
+
+*Brown, S. (2018). All about that base ? Branding and the domestic politics of Canadian foreign aid. Canadian Foreign Policy Journal, 24(2), 145‑164. https://doi.org/10.1080/11926422.2018.1461666
+
+*Brown, S. (2020). All about that base? In Canada, Nation Branding and Domestic Politics (p. 19‑38). Routledge. https://doi.org/10.4324/9780429031366-3
+
+*Dietrich, S., Milner, H. V., & Slapin, J. B. (2020). From Text to Political Positions on Foreign Aid : Analysis of Aid Mentions in Party Manifestos from 1960 to 2015. International Studies Quarterly, 64(4), 980‑990. https://doi.org/10.1093/isq/sqaa063
+
+*Dreher, A., Nunnenkamp, P., & Schmaljohann, M. (2015). The Allocation of German Aid : Selfinterest and Government Ideology. Economics &amp; Politics, 27(1), 160‑184. https://doi.org/10.1111/ecpo.12053
+
+*Greene, Z. D., & Licht, A. A. (2017). Domestic Politics and Changes in Foreign Aid Allocation : The Role of Party Preferences. Political Research Quarterly, 71(2), 284‑301. https://doi.org/10.1177/1065912917735176
+
+*Greene, Z. D., & Licht, A. A. (2023). Donor political preferences and the allocation of aid : Patterns in recipient type. Conflict Management and Peace Science, 41(2), 155‑176. https://doi.org/10.1177/07388942231195300
+
+*Isopi, A., & Mavrotas, G. (2009). Aid Allocation and Aid Effectiveness : An Empirical Analysis. In Development Aid (p. 114‑157). Palgrave Macmillan UK. https://doi.org/10.1057/9780230595163_6
+
+*Lindelöw V. & Ågren, S. (2018). Pengar från höger och vänster? En komparativ studie om skillnaden i biståndsallokering mellan vänster- och högerregeringar.
+
+*Narang, N. (2015). Forgotten Conflicts : Need versus Political Priority in the Allocation of Humanitarian Aid across Conflict Areas. International Interactions, 42(2), 189‑216. https://doi.org/10.1080/03050629.2016.1080697
+
+
+
