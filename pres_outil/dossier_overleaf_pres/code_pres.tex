@@ -1,0 +1,282 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% It has been edited for teaching purposes by Daniel Krähmer and Dr. Gerrit Bauer (LMU). 
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	THEMES ET PACKAGES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer} % Cette commande indique à LaTeX que le document actuel est une présentation (« beamer »).
+
+\usetheme{Boadilla} % Le thème « Boadilla » combine un design simple avec des fonctionnalités utiles. Il en va de même pour des thèmes tels que « Madrid » ou « Pittsburgh ». 
+
+% Voici une série de paquets utiles dont nous aurons besoin ci-après :  
+\usepackage[nfrench]{babel} % Définit la langue source de votre document. Cela concerne notamment le format de la date, les guillemets ou la désignation de certaines sections du document (par exemple « Inhaltsverzeichnis » au lieu de « Contents », etc.). Pour les documents en anglais, vous pouvez omettre la commande ou définir \usepackage[english]{babel}.
+
+\usepackage[utf8]{inputenc} % Permet l'utilisation sans problème des caractères spéciaux (par exemple, les trémas, les accents, etc.) ainsi que la césure correcte des mots correspondants.
+
+\usepackage{tikz}
+
+\usepackage{hyperref} % Permet de créer des liens cliquables (par exemple, adresses e-mail, URL, liens dans le document). Tous les détails peuvent être spécifiés via \hypersetup{...}, par exemple \hypersetup{urlcolor=blue} pour des liens URL bleus. x
+
+%------------------------------------------------------------
+% Barre de navigation
+%------------------------------------------------------------
+
+% Le code suivant permet d'ajouter à notre présentation un pied de page dans lequel tous les chapitres apparaissent sous forme de liens cliquables.
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  
+  % BLOC 1 : TON NOM (Même style que le numéro de page)
+  \begin{beamercolorbox}[wd=.20\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
+    \usebeamerfont{date in head/foot}%
+    Charlotte Amédée
+  \end{beamercolorbox}%
+  
+  % BLOC 2 : NAVIGATION (Couleur contrastée au centre)
+  \begin{beamercolorbox}[wd=.70\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}%
+    \insertsectionnavigationhorizontal{.65\paperwidth}{}{}%
+  \end{beamercolorbox}%
+  
+  % BLOC 3 : NUMÉRO DE PAGE
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+% Supprimer les icônes de navigation
+\beamertemplatenavigationsymbolsempty
+
+\usepackage[sfdefault]{libertine}
+\usepackage[T1]{fontenc}
+
+%------------------------------------------------------------------
+%   Configuration des listes (Gemini) 
+%------------------------------------------------------------------
+% Couleur des puces de liste (niveau 1, 2 et 3)
+\setbeamercolor{itemize item}{fg=TrelloBlue}
+\setbeamercolor{itemize subitem}{fg=TrelloBlue}
+\setbeamercolor{itemize subsubitem}{fg=TrelloBlue}
+
+%------------------------------------------------------------------
+%   COULEURS
+%------------------------------------------------------------------
+\definecolor{TrelloBlue}{RGB}{17, 104, 227}
+\definecolor{Black}{RGB}{35,35,35}
+\definecolor{White}{RGB}{255,255,255}
+\definecolor{Darkgrey}{RGB}{98,100,104}
+\definecolor{Middlegrey}{RGB}{192,193,195}
+\definecolor{Lightgrey}{RGB}{230,230,231}
+\definecolor{Superlightgrey}{RGB}{245,245,245}
+
+\setbeamercolor{item projected}{bg=TrelloBlue,fg=White}
+
+\setbeamercolor{section in toc}{fg=Darkgrey,bg=White}
+\setbeamercolor{alerted text}{fg=TrelloBlue}
+\setbeamercolor*{palette primary}{fg=TrelloBlue,bg=Lightgrey}
+\setbeamercolor*{palette secondary}{fg=TrelloBlue,bg=Lightgrey}
+\setbeamercolor*{palette tertiary}{bg=TrelloBlue,fg=White}
+\setbeamercolor*{palette quaternary}{fg=TrelloBlue,bg=Black}
+
+\setbeamercolor*{sidebar}{fg=TrelloBlue,bg=Lightgrey}
+
+\setbeamercolor*{palette sidebar primary}{fg=TrelloBlue}
+\setbeamercolor*{palette sidebar secondary}{fg=White}
+\setbeamercolor*{palette sidebar tertiary}{fg=TrelloBlue}
+\setbeamercolor*{palette sidebar quaternary}{fg=Lightgrey}
+
+\setbeamercolor{titlelike}{parent=palette primary,fg=TrelloBlue}
+\setbeamercolor{frametitle}{bg=Lightgrey, fg=TrelloBlue}
+\setbeamercolor{frametitle right}{bg=Middlegrey}
+
+\setbeamercolor{separation line}{fg=Darkgrey}
+\setbeamercolor{fine separation line}{fg=Darkgrey}
+
+\setbeamercolor*{bibliography entry author}{fg=TrelloBlue}
+\setbeamercolor*{bibliography entry note}{fg=TrelloBlue!80!white}
+
+%----------------------------------------------------------------------------------------
+%	TITRES DES DIAPOSITIVES 
+%----------------------------------------------------------------------------------------
+% Vous trouverez ci-dessous des informations LaTeX qui seront utilisées ultérieurement pour créer automatiquement une diapositive de titre. 
+% TITRE: 
+% \NormalSize = Très grand, \textbf = Gras
+\title{\Huge {Outil numérique - Trello}}
+
+% NOM:
+\author{\large \textsc{Charlotte Amédée}}
+
+\institute{
+    \normalsize{POL 6078 - Outils numériques en sciences sociales} \\ \vspace{0.2cm} % vspace ajoute un petit espace vertical
+    \small Étudiante à l'École supérieure d'études internationales \\
+    \textit{Université Laval} % \textit = Italique
+} 
+
+% DATE:
+% \footnotesize = Assez petit
+\date{\footnotesize 4 Décembre 2025} 
+    
+\begin{document} 
+
+\begin{frame} 
+\titlepage 
+\begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=south west, xshift=0.2cm, yshift=0.4cm] 
+        at (current page.south west) {
+            \includegraphics[width=1.5cm]{Images/logo_ecole.png}
+        };
+    \end{tikzpicture}
+    
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	HISTORIQUE
+%----------------------------------------------------------------------------------------
+\section{Historique} % La commande \section divise votre document LaTeX en sections. Vous devez donner à ces sections des noms significatifs, car ils apparaîtront dans votre plan.
+
+%\subsection{Subsection Example} %La commande \subsection vous offre un deuxième niveau de structure, analogue à \section
+
+\begin{frame}{Historique}
+    \centering
+    \includegraphics[height=1cm]{Images/logo_trello.png}
+    \vspace{1cm}
+    \begin{itemize}
+        \setlength\itemsep{1.5em}
+        \item Lancement en 2011 par Fog Creek Software
+        \item Vendu à Atlassian en 2017
+        \item Outil de gestion de projet qui utilise la méthode KANBAN
+    \end{itemize}
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=south west, xshift=0.2cm, yshift=0.4cm] 
+        at (current page.south west) {
+            \includegraphics[width=1.5cm]{Images/logo_ecole.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	CARACTÉRISTIQUES DE L'OUTIL
+%----------------------------------------------------------------------------------------
+\section{Caractéristiques}
+
+\begin{frame}[fragile]{Caractéristiques} 
+% Important : pour que LaTeX sache ce que singifie une clé bib, vous devez d'abord créer une bibliothèque externe. Celle-ci est intégrée dans ce fichier en haut des paramètres. Vous y enregistrez toutes les informations pertinentes relatives à une publication (par exemple, le titre, les auteurs, l'année de publication, etc.) et définissez une clé Bib . Pour citer ensuite une publication dans votre document LaTeX, vous pouvez toujours utiliser la clé Bib dans la commande cite. 
+    \vspace{-0.6cm}
+    \begin{columns}[c] % T = aligner le haut des colonnes (Top)
+        
+        % --- COLONNE GAUCHE (TEXTE) ---
+        \begin{column}{0.5\textwidth} % Occupe 50% de la largeur
+            \begin{table}
+            \small
+    \centering
+    % Cette commande augmente l'espace vertical entre les lignes 
+    \renewcommand{\arraystretch}{2.0} 
+
+    \begin{tabular}{p{0.35\textwidth} | p{0.50\textwidth}}
+    
+        \textbf{\textcolor{TrelloBlue}{Critère}} & \textbf{\textcolor{TrelloBlue}{Détails}} \\ 
+        \hline
+            \textbf{Accessibilité} & Modèle Freemium \\
+            \textbf{Communauté} & 50M d'utilisateurs \\
+            \textbf{Popularité} & Référence de la méthode Kanban \\
+            \textbf{Compatibilité} & « Power-Ups » \\
+            \textbf{Transparence} & Logiciel propriétaire \\
+            \textbf{Adaptabilité} & Totale dans le modèle payant \\
+    
+        
+    \end{tabular}
+\end{table}
+  \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=south west, xshift=0.2cm, yshift=0.4cm] 
+        at (current page.south west) {
+            \includegraphics[width=1.5cm]{Images/logo_ecole.png}
+        };
+    \end{tikzpicture}
+        \end{column}
+        
+        % --- COLONNE DROITE (IMAGE) ---
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Images/market_share.png}
+        \end{column}
+        
+    \end{columns}
+\end{frame}
+
+%-----------------------------------------------
+% INTERFACE DE L'OUTIL
+%-----------------------------------------------
+\section{Interface de l'outil}
+
+\begin{frame}{À quoi est ce que ça ressemble ?}
+
+    % --- 1. L'IMAGE (HAUT) ---
+    \vspace{-0.8cm}
+    \begin{center}
+        % height=0.6\textheight : L'image prend 60% de la hauteur disponible
+        % keepaspectratio : Empêche l'image d'être déformée
+        \includegraphics[height=0.6\textheight, keepaspectratio]{Images/exemple_trello.png}
+    \end{center}
+    % --- 2. LA LISTE HORIZONTALE (BAS) ---
+        \vspace{-0.7cm}
+        \begin{columns}[t] % [t] aligne le texte en haut si un item a plusieurs lignes
+        
+        \begin{column}{0.33\textwidth}
+             \begin{itemize}
+                \item Structuration des étapes de la recherche (Kanban)
+             \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.33\textwidth}
+             \begin{itemize}
+                \item Importation de fichers et\\« Power-Ups » 
+             \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.33\textwidth}
+             \begin{itemize}
+                \item Gestion d'équipe
+             \end{itemize}
+        \end{column}
+        
+    \end{columns}
+
+    % --- LE LOGO (Toujours en bas à gauche) ---
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=south west, xshift=0.2cm, yshift=0.4cm] 
+        at (current page.south west) {
+            \includegraphics[width=1.5cm]{Images/logo_ecole.png}
+        };
+    \end{tikzpicture}
+
+\end{frame}
+
+\section {}
+\begin{frame}
+\centering
+\LARGE\textmd{Pour conclure... }
+\begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=south west, xshift=0.2cm, yshift=0.4cm] 
+        at (current page.south west) {
+            \includegraphics[width=1.5cm]{Images/logo_ecole.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+%-----------------------------------------------
+\end{document} 
