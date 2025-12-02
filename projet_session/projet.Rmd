@@ -3,12 +3,12 @@ title: "POL6078 - Projet de session : L'aide internationale française"
 author: "Charlotte Amédée"
 date: "Décembre 2024"
 output:
+  pdf_document:
+    toc: true
   html_document:
     theme: lumen
     toc: true
     toc_float: true
-  pdf_document:
-    toc: true
 ---
 <style type="text/css">
   .title, .author, .date {
