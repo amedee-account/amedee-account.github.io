@@ -16,8 +16,13 @@
   </head>
   <body class="is-preload">
     <!-- Header -->
-    
+    <button id="menu-toggle" class="menu-toggle element">
+      <i class="fas fa-bars"></i>
+      </button>
+
     <section id="header">
+      <span id="close-sidebar" class="close-btn">&times;</span>
+      
       <header>
         <span class="image avatar element"
           ><img src="images/photo_id_2_croppee.png" alt="Ma photo"
@@ -33,7 +38,8 @@
           <li><a href="#one" class="active element">À propos</a></li>
           <li><a href="#two" class="element" >Travail et réalisations</a></li>
           <li><a href="#three" class="element" >Mon CV</a></li>
-          <li><a href="#four" class="element" >Contact</a></li>
+          <li><a href="#four">Mes Projets</a></li>
+          <li><a href="#five" class="element" >Contact</a></li>
         </ul>
       </nav>
       <footer>
@@ -117,8 +123,8 @@
               et extra-scolaire, centré sur l’analyse des conflits en particulier.
             </p>
             <div style="width: 100%; height: 600px; overflow: auto; margin-bottom: 20px;">
-             <object data="cv/CV_Charlotte_Amedee.pdf" type="application/pdf" width="100%" height="100%">
-             <img src="cv/CV_Charlotte_Amedee.png" alt="Aperçu du CV" style="width: 100%;" />
+             <object data="cv/Charlotte_Amedee_CV.pdf" type="application/pdf" width="100%" height="100%">
+             <img src="cv/CV_Capture.png" alt="Aperçu du CV" style="width: 100%;" />
              <p>  Vous pouvez <a href="cv/CV_Charlotte_Amedee.pdf">télécharger le PDF</a> 
             ou utiliser l'image d'aperçu ci-dessus.
             </p>
@@ -139,6 +145,36 @@
 
         <!-- Four -->
         <section id="four">
+          <div class="container">
+            <h3>Mes Projets</h3>
+            <p>
+              Voici une sélection de mes projets. Cliquez sur l'image pour découvrir le projet complet.
+            </p>
+            <div class="features">
+              <article>
+                <!-- Aperçu du projet en image -->
+                <a href="projet_session/projet.html" class="image" target="_blank">
+                  <img src="images/projet_final.png" alt="Aperçu du projet de session" />
+                </a>
+                <div class="inner">
+                  <h4>Cours d'outils numériques (POL-6078)</h4>
+                  <p>
+                    Cliquez sur l'image ou sur le lien ci-dessous pour explorer le contenu de ce projet.
+                  </p>
+                  <!-- Lien direct vers le projet -->
+                  <p>
+                    <a href="projet_session/projet.html" target="_blank" class="button primary">
+                      Voir le projet complet
+                    </a>
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Five -->
+        <section id="five">
           <div class="container">
             <h3>Me joindre</h3>
             <p>
@@ -181,7 +217,9 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <!--Essai pour cacher le menu et le révéler ensuite par un bouton-->
-   
+   <div id="overlay"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
   </body>
 </html>
 
